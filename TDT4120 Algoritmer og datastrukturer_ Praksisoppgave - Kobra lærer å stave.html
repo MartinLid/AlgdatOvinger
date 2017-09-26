@@ -1,0 +1,405 @@
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+  <link rel  = "stylesheet"
+        href = "https://tdt4120.idi.ntnu.no/css/stylesheet.css"
+        type = "text/css">
+  <!-- MathJax.org -->
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <title>TDT4120 Algoritmer og datastrukturer: Praksisoppgave - Kobra lærer å stave</title>
+</head>
+<body leftmargin=0 rightmargin=0 topmargin=0 marginwidth=0 marginheight=0>
+
+<!-- old colour=#fe7312 -->
+
+<table width=100% cellpadding=0 cellspacing=0 border=0>
+  <tr>
+    <td class="container" colspan=2>
+      <table width=100% cellpadding=0 cellspacing=0 border=0>
+        <tr bgcolor="#eeeeff">
+          <td class="container" valign=top><img src="https://tdt4120.idi.ntnu.no/images/heading_left.tdt4120.jpg"></td>
+          <td class="container" align=right style="text-align:right" valign=top><img src="https://tdt4120.idi.ntnu.no/images/heading_right.jpg"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="container" align=left>
+      <img src="https://tdt4120.idi.ntnu.no/images/pixel.gif" width=1 height=15>
+      <font color=#888888 face="Tahoma,Arial,Helvetica" size=-2>
+      Sist endret: 23.09.2016      </font>
+    </td>
+    <td class="container" align=right style="text-align: right;">
+      <img src="https://tdt4120.idi.ntnu.no/images/pixel.gif" width=1 height=15>
+      <font color=#888888 face="Tahoma,Arial,Helvetica" size=-2>
+&nbsp      </font>
+    </td>
+  </tr>
+  <tr><td class="container">&nbsp;</td></tr>
+  <tr>
+    <td class="container" valign=top>
+      <table cellpadding=0 cellspacing=0 border=0>
+<tr><td class="menu"><img src="https://tdt4120.idi.ntnu.no/images/pixel.gif"
+width=13 height=1></td><td class="menu">
+<table cellpadding=4 cellspacing=0 border=0>
+<tr><td class="menu"><a href="https://tdt4120.idi.ntnu.no/">Øvinger</a></td></tr>
+<tr><td class="menu"><font size=-3>&nbsp;</font></td></tr>
+<tr><td class="menu"><a href="https://tdt4120.idi.ntnu.no/blackboard">Blackboard</a></td></tr>
+<tr><td class="menu"><a href="https://tdt4120.idi.ntnu.no/piazza">Piazza</a></td></tr>
+<tr><td class="menu"><font size=-3>&nbsp;</font></td></tr>
+<tr><td class="menu"><a href="http://www.idi.ntnu.no">IDI</a></td></tr>
+<tr><td class="menu"><a href="http://www.ntnu.no">NTNU</a></td></tr>
+
+<tr><td class="menu"><font size=-3>&nbsp;</font></td></tr>
+<tr><td class="menu"><a href="https://innsida.ntnu.no/sso/?target=tdt4120">Logg inn</a></td></tr></table>
+</td>
+<td class="menu">
+<img src="https://tdt4120.idi.ntnu.no/images/pixel.gif"
+width=13 height=1>
+</td>
+</tr></table>
+    </td>
+    <td class="container" valign=top width=100%>
+      <table cellpadding=0 cellspacing=0 border=0 width=100%><tr><td valign=top>
+
+<!-- *****************
+       END OF HEADER
+     ***************** -->
+
+
+<h1>Praksisoppgave - Kobra lærer å stave</h1>
+<p>
+[<a href="https://tdt4120.idi.ntnu.no/praksis/ordbok/">Oppgave</a>]
+[<a href="https://tdt4120.idi.ntnu.no/praksis/ordbok/levering/">Levering</a>]
+[<a href="https://tdt4120.idi.ntnu.no/praksis/ordbok/highscore/">Highscore</a>]
+
+</p>
+<p><small>Innleveringsfrist: 02.10.2017 15:00</small></p>
+
+
+<p>
+    Velg språk:<br /> 
+                - Python<br />
+                - <a href="https://tdt4120.idi.ntnu.no/praksis/ordbok/?lang=java">Java</a><br />
+</p>
+<h3>Løsningsforslag</h3>
+
+        
+<p>Følgende filer er tilgjengelige etter at fristen har gått ut:<br />
+
+<a href="https://tdt4120.idi.ntnu.no/praksis/ordbok/lf/py/ordbok.py">ordbok.py</a>, 
+<a href="https://tdt4120.idi.ntnu.no/praksis/ordbok/lf/py/ordbok_tweak.py">ordbok_tweak.py</a></p>
+
+
+<table>
+    <tr>
+        <td colspan="2"><h3>Rammeverk</h3></td>
+    </tr>
+    <tr>
+        <td colspan="2"><i>Du trenger ikke benytte rammeverket,
+            du kan skrive programmet som du vil.</i>
+        </td>
+    </tr>
+    <tr>
+        <th>Filnavn</th>
+        <th>Hva skal endres</th>
+    </tr>
+    <tr>
+        <td style="padding-right: 10px;"><a href="https://tdt4120.idi.ntnu.no/praksis/ordbok/rammeverk/ordbok.py">ordbok.py</a></td>
+        <td>Funksjonene bygg(ordliste) og posisjoner(ord, strukt)</td>
+    </tr>
+    <tr>
+        <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="2"><h3>Test-data</h3></td>
+    </tr>
+    <tr>
+        <th>Inndata</th>
+        <th>Korrekt utdata</th>
+    </tr>
+    <tr>
+        <td><a href="https://tdt4120.idi.ntnu.no/praksis/ordbok/testdata/input_eksempel_01.txt">input_eksempel_01.txt</a></td>
+        <td><a href="https://tdt4120.idi.ntnu.no/praksis/ordbok/testdata/output_eksempel_01.txt">output_eksempel_01.txt</a></td>
+    </tr>
+</table>
+        <h2>Kobra l&aelig;rer &aring; stave</h2>
+
+ Det er ikke n&oslash;dvendig &aring; lese historien for &aring; l&oslash;se oppgaven. <p>
+- Men hva er dette da, Kobra? Kanskje ett av tre ord er stavet riktig i dette
+  notatet. Hvor var det egentlig du gikk på skole?<br />
+</p>
+<p>
+Algemannen og Kobra er på kontoret, og Algemannen ser over et notat han 
+akkurat dikterte. Etter at Gewalt kjøpte opp et multinasjonalt advokatfirma
+forrige uke, har våre helter måttet jobbe overtid hver dag. Gewalt er en mann
+som prøver å følge med i tiden, og ukens strategi er er å kjøpe opp små firmaer
+i besittelse av patenter. De siste dagene har han saksøkt alle som kan krype og
+gå.<br />
+- Hva kan du vente da, når jeg skal være god hjelper, personlig tjener
+  <i>og</i> sekretær. Jeg kan jo ikke klare alt perfekt.<br />
+- Skal ikke du liksom være en superhelt da?<br />
+- Tror du for eksempel at Wolverine er flink i bøying av sterke verb eller? Ble
+  ikke noe lettere av at Gewalt fikk tak i den patenten på avlange 
+  skriveredskaper heller. Prøv å skrive med en potet dyppet i saft selv du.
+</p>
+<p>
+Stillheten legger seg over kontoret. Begge to har skjønt at de nærmet seg
+farlige eksistensielle spørsmål.
+<br />
+- Fikk ikke du penger til å kjøpe en ordbok, da? spør Algemannen forsiktig.
+  <br />
+- Tja, jo. Jeg brukte vel pengene på den siste Fantonald-pocketen.<br />
+- Det var penger vel brukt, da.<br />
+- Men har du tenkt over hvor ubrukelige de ordbøkene er eller? Hvis jeg slår
+  opp i en ordbok, hva er det jeg lurer på da? Jo, jeg lurer på hvordan ordet 
+  staves. Men hvis jeg ikke vet hvordan ordet staves, hvordan i bestefars lange
+  skjegg skal jeg kunne finne det i ordboken da?<br />
+- Du har jo et poeng, erkjenner Algemannen.<br />
+- Og vi har et middels stort problem!<br />
+</p>
+<h2>Oppgave</h2>
+
+
+<p>
+Du skal lage et program for å finne ord i en tekst. For å gjøre dette,
+kan du lage en funksjon som bygger et tre og en funksjon som bruker
+treet til å søke.
+Første linje av input til programmet er en streng som består av 
+tegnene <code>[a-z]</code> og mellomrom. Dette representerer dokumentet det 
+skal søkes i. De neste linjene i input er spørringer etter ord. Programmet skal
+søke etter disse ordene i teksten, og returnere hvilke posisjoner ordet finnes
+på. Tegnet <code>?</code> brukes til å angi at her kan det stå en hvilket som
+helst bokstav fra alfabetet <code>[a-z]</code>.
+</p>
+
+<p>
+En måte å løse denne oppgaven på er å putte ordene inn i et tre, hvor hver
+bokstav i ordet tilsvarer en peker til neste node. Nedenfor ser du treet for
+setningen <code>ha ha mons har en hund med moms hun er en hunn</code>. Legg 
+merke til at noen av nodene inne i treet tilsvarer slutten på ord,
+mens andre ikke gjør det. Legg også merke til at noen ord finnes på flere
+steder i dokumentet.
+</p>
+
+<p>Funksjonen <code>posisjoner(ord, indeks, node)</code>
+som skal returnerer posisjonene til alle treff på
+<code>ord</code> i trestrukturen med rot <code>node</code>. 
+<code>indeks</code> sier hvor langt i ordet vi har kommet.
+For å finne disse posisjonene kan den bruke <b>rekursjon</b>.
+Å bruke rekursjon vil si å utføre rekursive kall.
+Et kall til funksjonen selv er et rekursivt kall.
+Rekursjon brukes som regel til å dele opp et problem i mindre
+deler, for deretter å sette sammen løsningene.
+I dette problemet er det ordene som inneholder <code>?</code>
+som kan gi flere delproblemer. Når du ser <code>?</code>
+skal du kalle <code>posisjoner</code> én gang for alle mulige erstatninger
+for <code>?</code> med de tilhørende delene av treet.
+</p>
+
+<!--
+<p>
+Når <code>posisjoner('e?', strukt)</code> blir kalt,
+må du kalle
+<code>posisjoner('', strukt1)</code> og
+<code>posisjoner('', strukt2)</code>
+og sette sammen resultatene fra disse to kallene.
+<code>strukt1</code> og <code>strukt2</code> er vist
+i figuren nedenfor. <code>strukt</code> er hele figuren.
+Grunnen til at ordet du sender med er den tomme strengen,
+er at det ikke er flere bokstaver igjen å finne.
+Da skal <code>posisjoner</code> øyeblikkelig skal returnere
+posisjonene i den første noden i <code>strukt</code>.
+</p>
+-->
+
+<p>
+<img src="https://tdt4120.idi.ntnu.no/praksis/ordbok/bilder/ordtre.png" alt="ordtre.png" />
+</p>
+
+
+<p>
+Output fra programmet ditt skal være <code>søkeuttrykk: pos1 pos2 ...
+posN</code>, som vist i eksempel-output. Posisjonene skal være
+sortert stigende. Dette gjøres allerede i den utdelte koden.
+</p>
+
+<p>
+I rammeverket er det brukt dictionaries. En <code>dict</code> i Python er 
+omtrent det samme som en <code>HashMap</code> Java, man kan lagre verdier 
+assosiert med nøkler, og hente dem ut igjen, i konstant tid &Theta;(1) (i
+gjennomsnitt). Forskjellen fra vanlige arrays, hvor nøklene er indekser, kan
+nøklene i en <code>dict</code> være hva som helst, og du er ikke avhengig av at
+de er i et lite verdiområde.
+</p>
+
+<p>
+Eksempel på bruk av <code>dict</code>:
+</p>
+
+<pre>
+&gt;&gt;&gt; d = {} 
+&gt;&gt;&gt; d['a'] = 1
+&gt;&gt;&gt; d['b'] = 2
+&gt;&gt;&gt; if 'b' in d:
+...     print d['b']
+... 
+2
+&gt;&gt;&gt; d[42] = 'mjau'
+&gt;&gt;&gt; print d.keys()
+['a', 42, 'b']
+&gt;&gt;&gt; print d.values()
+[1, 'mjau', 2]
+&gt;&gt;&gt; print d.items()
+[('a', 1), (42, 'mjau'), ('b', 2)]
+</pre>
+
+
+<h3>Rammeverk</h3>
+
+<pre>
+#!/usr/bin/python3
+
+from sys import stdin, stderr
+import traceback
+
+
+class Node:
+    def __init__(self):
+        self.barn = {}
+        self.posi = []
+
+
+def bygg(ordliste):
+    # <font color="green">SKRIV DIN KODE HER</font>
+
+
+def posisjoner(ord, indeks, node):
+    # <font color="green">SKRIV DIN KODE HER</font>
+
+
+def main():
+    try:
+        ord = stdin.readline().split()
+        ordliste = []
+        pos = 0
+        for o in ord:
+            ordliste.append((o, pos))
+            pos += len(o) + 1
+        toppnode = bygg(ordliste)
+        for sokeord in stdin:
+            sokeord = sokeord.strip()
+            print(&quot;%s:&quot; % sokeord, end='')
+            posi = posisjoner(sokeord, 0, toppnode)
+            posi.sort()
+            for p in posi:
+                print(&quot; %s&quot; % p, end='')
+            print()
+    except:
+        traceback.print_exc(file=stderr)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+
+</pre>
+<h3>Variabelbeskrivelse</h3>
+
+Rammeverket oppretter en nodeklasse for deg med folgende egenskaper:
+<br/>
+
+barn - en liste med alle nodebarna til noden (noder direkte underlagt noden du staar i)
+<br/>
+
+posi - en liste over indeksene hvor ordet begynner i tekststrengen (inputet)
+<br/>
+<br/>
+
+Andre variable:
+<br/>
+'ordliste' - en liste med tupler. Tuplene er paa folgende form: (ord, posisj), og det er et tuppel for hvert ord i input.
+Merk at for ord som forekommer flere ganger vil det vaere flere tupler, et tuppel for hver forekomst. For eksempel baade ("ha", 0) og ("ha", 3) for eksempel-input.
+
+<br/>
+'ord' - et enkelt ord, for eksempel "ha".
+
+<br/>
+'indeks' - sier hvor langt i ordet vi har kommet i soket, og er altsaa et tall.
+
+<br/>
+'node' - er rotnoden til treet du skal soke gjennom.
+
+<br/>
+<br/>
+Dersom du fortsatt er usikker paa de ulike variablene, kan det vaere greit aa printe de og se hva de faktisk inneholder.
+<h3>Input-eksempel</h3>
+
+<pre>
+ha ha mons har en hund med moms hun er en hunn
+ha
+mjau
+m?d
+e?
+</pre>
+<h3>Tilh&oslash;rende output</h3>
+
+<pre>
+ha: 0 3
+mjau:
+m?d: 23
+e?: 15 36 39
+</pre>
+<h2>Hvordan teste Python-program</h2>
+
+<h4>Unix</h4>
+<p>
+    Du kan teste programmet ditt med kommandoen:
+</p>
+<pre>
+    python program.py &lt; input.txt
+</pre>
+<h4>Windows</h4>
+<ul>
+    <li>Lagre programmet ditt på feks <code>m:\tdt4120\</code></li>
+    <li>&Aring;pne kommandolinje (Start -&gt; Kjør -&gt; <code>cmd</code>)</li>
+        <ul>
+            <li><code>m:</code></li>
+            <li><code>cd \tdt4120</code></li>
+            <li><code>python.exe program.py &lt; input.txt</code></li>
+        </ul>
+    <li>Merk at hvis du bare skriver "python", ikke "python.exe", ser det ut til ofte å oppstå en feil fordi python prøver å kjøre inputfilen også.</li> 
+</ul>
+    
+<h2>Godbit</h2>
+
+<p>
+Bit 1: Ofte er du interessert i å søke etter uttrykk med ukjente delstrenger,
+hvor du ikke vet lengden på delstrengen. La <code>*</code> representere fra 0
+til uendelig mange bokstaver. En spørring som <code>*e*</code> i eksemplet
+skal da gi treff på ordene <code>en</code>, <code>er</code> og
+<code>med</code>. Modifiser søkefunksjonen din til å kunne søke etter slike 
+uttrykk.
+</p>
+
+<!-- ****************
+       START FOOTER
+     **************** -->
+
+<br><br>
+      </td>
+      <td><img src="https://tdt4120.idi.ntnu.no/images/pixel.gif"
+      width=30 height=1></td>
+      </tr></table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
